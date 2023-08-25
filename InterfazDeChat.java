@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import javax.swing.JFrame;
 
 /**This class makes a simple chat interface that uses Swing components.
  Users can exchange messages through the chat client connected to a server using sockets
@@ -27,11 +28,23 @@ public class InterfazDeChat extends JFrame {
         chatTextArea.setFont(new Font("Arial",Font.PLAIN, 14));
         JScrollPane scrollPane = new JScrollPane(chatTextArea);
         add(scrollPane, BorderLayout.CENTER);
+        chatTextArea.setBackground(Color.CYAN); // Change the background color to aqua green
+        Font newFont = chatTextArea.getFont().deriveFont(16f);// Create a new font of size 18
+        chatTextArea.setFont(newFont);// Change the font of the chatTextArea
+        chatTextArea.setAlignmentX(Component.CENTER_ALIGNMENT);
+        chatTextArea.setAlignmentY(Component.CENTER_ALIGNMENT);
+        chatTextArea.setLineWrap(true); // wrap lines
+        chatTextArea.setWrapStyleWord(true); // break words
+        chatTextArea.setBorder(BorderFactory.createEmptyBorder(5, 10, 10, 50)); // Adjust positions
+
+
 
         // Create the input field and the submit button
         inputField = new JTextField();
         inputField.setFont(new Font("Arial", Font.PLAIN,14));
         sendButton = new JButton("Enviar");
+        sendButton.setBackground(Color.DARK_GRAY); // Change the background color to gray
+        sendButton.setForeground(Color.WHITE); // Change the color of the text to white
 
         // Create a panel to contain the input field and the submit button
         JPanel inputPanel = new JPanel(new BorderLayout());
