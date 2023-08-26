@@ -12,15 +12,15 @@ class ClienteDeChat {
     private InterfazDeChat interfaz; // Reference to the chat interface
 
     /** Constructor of the ChatClient class.
-     parameter chatInterface The chat interface associated with this client.
+     * @param; The chat interface associated with this client.
      */
     public ClienteDeChat(InterfazDeChat interfaz) {
         this.interfaz = interfaz;
     }
 
     /** Establishes a connection to the chat server on the specified host and port.
-     param host: The host address of the chat server.
-     param: port The port number of the chat server.
+     *@param: The host address of the chat server.
+     *@param: port The port number of the chat server.
      throws an IOException error during socket creation or stream initialization.
      */
     public void conectar(String host, int puerto) throws IOException {
@@ -30,7 +30,7 @@ class ClienteDeChat {
     }
 
     /** Send a message to the chat server.
-     message parameter: The message to send.
+     * @param: The message to send.
      */
     public void enviarMensaje(String mensaje) {
         out.println(mensaje);

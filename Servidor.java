@@ -38,6 +38,7 @@ public class Servidor {
 
     /** The ClientHandler inner class handles communication with an individual client.
      Each client connection is made in a separate thread.
+
      */
     private class ClientHandler extends Thread {
         private Socket clientSocket; // client socket for communication
@@ -52,7 +53,7 @@ public class Servidor {
         }
 
         /** Send a message to the connected client.
-         message parameter: The message to send.
+         * @param: The message to send.
          */
         public void sendMessage(String message) {
             writer.println(message);

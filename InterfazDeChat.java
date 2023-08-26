@@ -37,8 +37,6 @@ public class InterfazDeChat extends JFrame {
         chatTextArea.setWrapStyleWord(true); // break words
         chatTextArea.setBorder(BorderFactory.createEmptyBorder(5, 10, 10, 50)); // Adjust positions
 
-
-
         // Create the input field and the submit button
         inputField = new JTextField();
         inputField.setFont(new Font("Arial", Font.PLAIN,14));
